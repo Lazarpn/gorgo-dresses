@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  // --color-white: #fff;
+  // --color-primary: #23b5d3;
+  // --color-primary-dark: #1c8fa7;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == phone) {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == tab-port) {
+    @media only screen and (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == tab-land) {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == big-desktop) {
+    @media only screen and (min-width: 1800px) {
+      @content;
+    }
+  }
+}
