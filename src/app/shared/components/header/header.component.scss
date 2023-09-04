@@ -1,0 +1,60 @@
+@import '/src/styles.scss';
+
+:host {
+  height: 80px;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: var(--color-white);
+  box-shadow: 0 0 10px 0px rgba(137, 122, 145, 0.5);
+  z-index: 20;
+
+  @include respond(phone) {
+    padding-top: 15px;
+    height: auto;
+  }
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+  background-image: url('/assets/images/logo-2.webp');
+  background-size: cover;
+}
+
+.header-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 5px;
+}
+
+.header-list {
+  display: flex;
+  gap: 40px;
+}
+
+.header-item {
+  list-style: none;
+  transition: all 0.2s;
+}
+
+.header-item:hover {
+  transform: translateY(-2px);
+}
+
+.header-link {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 18px;
+  display: flex;
+}

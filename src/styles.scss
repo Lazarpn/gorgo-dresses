@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
-  // --color-white: #fff;
-  // --color-primary: #23b5d3;
+  --color-white: #fff;
+  --color-primary: #e5c2c0;
   // --color-primary-dark: #1c8fa7;
 }
 *,
@@ -45,4 +45,13 @@ body {
       @content;
     }
   }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }

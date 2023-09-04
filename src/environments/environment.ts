@@ -4,10 +4,10 @@
 
 export const environment = {
   production: false,
-  url: 'https://localhost:7068',
-  appAuthUrl: 'http://localhost:4200/auth',
+  url: 'https://localhost:7197',
+  appAuthUrl: 'http://localhost:4200/prijava',
   appHomeUrl: 'http://localhost:4200',
-  defaultLanguage: 'en',
+  defaultLanguage: 'rs',
 };
 
 /*

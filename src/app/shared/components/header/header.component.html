@@ -1,0 +1,22 @@
+<nav class="header-nav">
+  <div class="logo"></div>
+  <ul class="header-list">
+    <li class="header-item" *ngIf="isAuthenticated && role === 'Administrator'">
+      <a class="header-link" routerLink="vencanice-admin">{{
+        'label.dresses-admin' | translate
+      }}</a>
+    </li>
+    <li class="header-item">
+      <a class="header-link" routerLink="/vencanice">{{ 'label.dresses' | translate }}</a>
+    </li>
+    <li class="header-item" *ngIf="isAuthenticated">
+      <a class="header-link" routerLink="/profil">{{ 'label.profile' | translate }}</a>
+    </li>
+    <li class="header-item" *ngIf="isAuthenticated">
+      <a class="header-link" (click)="onSignOut()">{{ 'label.signOut' | translate }}</a>
+    </li>
+    <li class="header-item" *ngIf="!isAuthenticated">
+      <a class="header-link" routerLink="/prijava">{{ 'label.authentication' | translate }}</a>
+    </li>
+  </ul>
+</nav>

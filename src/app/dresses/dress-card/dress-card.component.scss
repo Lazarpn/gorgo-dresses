@@ -1,0 +1,41 @@
+:host {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-image: url('/assets/images/test_banner.jpg');
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.new-dress {
+  z-index: 50;
+  background-color: #ececec;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.notification-heading {
+  color: var(--color-primary);
+}
+
+.heart-box {
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.heart-icon {
+  cursor: pointer;
+  fill: #fff;
+  width: 50px;
+  height: 50px;
+}
