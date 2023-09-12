@@ -9,8 +9,13 @@ import { DressBasicInfoModel } from 'src/app/shared/models/dress/dress-basic-inf
 export class DressCardComponent {
   @Input() set dress(model: DressBasicInfoModel) {
     this.backgroundImage = `url(${model.fileUrl})`;
+    const validDate = new Date(new Date(model.date).getTime() + 14 * 86_400_000);
+    if (validDate > new Date()) {
+      this.isDressNew = true;
+    }
   }
   @HostBinding('style.background-image') backgroundImage;
+  isDressNew: boolean = false;
 
   constructor() {}
 

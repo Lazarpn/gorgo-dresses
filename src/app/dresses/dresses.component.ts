@@ -17,7 +17,7 @@ export class DressesComponent implements OnInit {
   dressTypes: DressTypeModel[] = [];
   sortTypes: SortTypeModel[] = [{ type: 'oldest' }, { type: 'newest' }];
   sortType: SortTypeModel = {
-    type: '',
+    type: 'newest',
   };
   filter: DressSearchFilter = {
     name: '',

@@ -21,11 +21,11 @@ export class FilterService {
     let sortedDresses: DressBasicInfoModel[] = [];
     if (sortType.type === 'newest') {
       sortedDresses = dresses.sort(
-        (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+        (b, a) => new Date(a.date).getTime() - new Date(b.date).getTime()
       );
     } else {
       sortedDresses = dresses.sort(
-        (b, a) => new Date(a.date).getTime() - new Date(b.date).getTime()
+        (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
       );
     }
     return sortedDresses;
