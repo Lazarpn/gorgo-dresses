@@ -1,0 +1,22 @@
+<div class="images-wrapper">
+  <div class="main-image" [style.backgroundImage]="'url(' + dress.fileUrl + ')'"></div>
+</div>
+<div class="form-wrapper">
+  <h2 class="heading">Vasa hajlina</h2>
+  <form class="form" (ngSubmit)="onFormSubmit()" #dressForm>
+    <label for="name" class="label"></label>
+    <input type="text" [ngModel]="dress.name" name="name" id="name" />
+
+    <label for="type" class="label"></label>
+    <input type="text" [ngModel]="dress.type" name="type" id="type" />
+
+    <label for="brand" class="label"></label>
+    <input type="text" [ngModel]="dress.brand" name="brand" id="brand" />
+
+    <label for="rentingPrice" class="label"></label>
+    <input type="number" [ngModel]="dress.rentingPrice" name="rentingPrice" id="rentingPrice" />
+
+    <label for="sellingPrice" class="label"></label>
+    <input type="text" [ngModel]="dress.sellingPrice" name="sellingPrice" id="sellingPrice" />
+  </form>
+</div>

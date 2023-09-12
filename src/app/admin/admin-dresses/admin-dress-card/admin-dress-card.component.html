@@ -1,0 +1,21 @@
+<div class="image" [style.backgroundImage]="'url(' + dress.thumbUrl + ')'"></div>
+<div class="info-wrapper">
+  <p class="info-label">{{ 'label.name' | translate }}:</p>
+  <p class="info">{{ dress.name }}</p>
+</div>
+<div class="info-wrapper">
+  <p class="info-label">{{ 'label.type' | translate }}:</p>
+  <p class="info">{{ dress.type }}</p>
+</div>
+<div class="info-wrapper">
+  <p class="info-label">{{ 'label.date' | translate }}:</p>
+  <p class="info">{{ dress.date }}</p>
+</div>
+<div class="icons-wrapper">
+  <svg (click)="onDressEdit()" class="icon">
+    <use xlink:href="/assets/SVG/sprite.svg#icon-pencil"></use>
+  </svg>
+  <svg (click)="onDressDelete()" class="icon">
+    <use xlink:href="/assets/SVG/sprite.svg#icon-bin"></use>
+  </svg>
+</div>

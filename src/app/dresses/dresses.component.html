@@ -1,1 +1,39 @@
-<gd-dresses-list></gd-dresses-list>
+<form class="form" #f="ngForm">
+  <div class="row-1">
+    <mat-form-field class="type-field">
+      <mat-label>Tip haljine</mat-label>
+      <mat-select (selectionChange)="onDressTypeSelected()" [(value)]="filter.type">
+        <mat-option>
+          {{ 'label.clear' | translate }}
+        </mat-option>
+        <mat-option *ngFor="let dressType of dressTypes" [value]="dressType.type">
+          {{ dressType.type }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- <mat-form-field class="search-field">
+      <mat-label>{{ 'label.search' | translate }}</mat-label>
+      <input type="text" name="name" [(ngModel)]="filter.name" matInput placeholder="Pretrazi" />
+    </mat-form-field> -->
+    <mat-form-field class="sort-field">
+      <mat-label>{{ 'label.sort' | translate }}</mat-label>
+      <mat-select (selectionChange)="onSortTypeSelected()" [(value)]="sortType.type">
+        <mat-option *ngFor="let sortType of sortTypes" [value]="sortType.type">
+          {{ 'label.' + sortType.type | translate }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <!-- <div class="row-2">
+    <mat-form-field class="sort-field">
+      <mat-label>{{ 'label.sort' | translate }}</mat-label>
+      <mat-select (selectionChange)="onSortTypeSelected()">
+        <mat-option *ngFor="let sortType of sortTypes" [value]="sortType.type">
+          {{ 'label.' + sortType.type | translate }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div> -->
+</form>
+<gd-dresses-list [dresses]="dresses"></gd-dresses-list>

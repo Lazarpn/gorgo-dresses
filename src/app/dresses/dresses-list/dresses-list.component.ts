@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { DressBasicInfoModel } from 'src/app/shared/models/dress/dress-basic-info-model';
 
 @Component({
   selector: 'gd-dresses-list',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./dresses-list.component.scss'],
 })
 export class DressesListComponent {
+  @Input() dresses: DressBasicInfoModel[] = [];
+
   constructor() {}
 
   ngOnDestroy(): void {}

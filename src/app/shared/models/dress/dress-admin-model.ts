@@ -1,8 +1,10 @@
-export interface DressCreateModel {
+export interface DressAdminModel {
+  id: string;
   name: string;
   type: string;
+  brand: string;
   rentingPrice: number;
   sellingPrice: number;
   date: Date;
-  file: FormData;
+  fileUrl: string;
 }
